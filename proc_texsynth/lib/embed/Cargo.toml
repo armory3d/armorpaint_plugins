@@ -1,0 +1,17 @@
+[package]
+name = "texture-synthesis-embed"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+name = "texsynth"
+path = "src/embed.rs"
+crate-type = ["staticlib"]
+
+[dependencies]
+texture-synthesis = { version = "0.8.0", path = "../lib" }
+libc = "0.2.79"
+
+[dependencies.image]
+version = "0.23"
+default-features = false
